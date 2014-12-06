@@ -1,0 +1,14 @@
+<h1>Фильмы</h1>
+<a ng-href="#add">Добавить фильм</a>
+<div ng-repeat="movie in getMovies()">
+    <div class="poster">
+        <div ng-switch="movie.img.length > 0">
+            <div ng-switch-when="true"><img src="./img/{{movie.img}}" /></div>
+            <div ng-switch-default class="no-picture">Нет изображения</div>
+        </div>
+    </div>
+    <div style="float: left">
+        <ng-include src="'views/partials/movie.html'"></ng-include>
+    </div>
+    <div style="clear:both"></div>
+</div>

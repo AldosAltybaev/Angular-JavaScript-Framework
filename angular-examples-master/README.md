@@ -1,0 +1,1 @@
+Если у вас не установлен bower, распакуйте содержимое архива https://drive.google.com/file/d/0B5cOitzeA1kwa3QzeVRaVkJid28/view?usp=sharing в корневую директорию

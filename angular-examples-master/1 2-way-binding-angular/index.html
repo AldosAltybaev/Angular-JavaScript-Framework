@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../styles.css">
+    <title>Angular: двустороннен связывание</title>
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="app.js"></script>
+</head>
+<body ng-app="CinemaApp" ng-controller="MovieCtrl">
+<h3>Добавить фильм</h3>
+
+<form ng-submit="addMovie()">
+    <div>
+        <label for="title">Фильм</label>
+        <input type="text" id="title" ng-model="currentMovie.title" required />
+        <div style="clear: both"></div>
+    </div>
+    <div>
+        <label for="year">Год</label>
+        <input type="text" id="year" ng-model="currentMovie.year"/>
+        <div style="clear: both"></div>
+    </div>
+    <input type="submit" value="Добавить"/>
+</form>
+
+<div>{{currentMovie.title}} ({{currentMovie.year}})</div>
+<h3>Фильмы</h3>
+
+<div>
+    <p ng-repeat="movie in movies">
+        {{movie.title}} ({{movie.year}})
+    </p>
+</div>
+</body>
+</html>

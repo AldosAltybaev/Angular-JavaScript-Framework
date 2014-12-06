@@ -1,0 +1,81 @@
+body {
+    font-size: 20px;
+    background-color: gainsboro;
+}
+
+a {
+    color: cornflowerblue;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+input {
+    height: 30px;
+    padding: 5px 10px 5px 15px;
+    font-size: 20px;
+}
+
+input, select {
+    border-radius: 5px;
+    margin: 3px;
+}
+
+select {
+    height: 40px;
+    font-size: 20px;
+    padding: 5px 10px 5px 15px;
+}
+
+input[type='submit'] {
+    height: 40px;
+    padding: 5px 50px;
+    background-color: cornflowerblue;
+    color: white;
+    border: 1px solid white;
+}
+
+input[type='text'] {
+    float: left;
+}
+
+label {
+    width: 100px;
+    height: 25px;
+    padding-top: 10px;
+    float: left;
+}
+
+.no-picture {
+    width: 240px;
+    height: 175px;
+    text-align: center;
+    padding-top: 150px;
+    border: 1px solid #000;
+    font-size: 20px;
+    background-color: white;
+}
+
+.poster {
+    width: 250px;
+    height: 360px;
+    float: left;
+}
+
+input.ng-invalid.ng-dirty {
+    background-color: #FFC0CB;
+}
+
+.error {
+    height: 40px;
+    margin: 10px;
+    border-radius: 10px;
+    border: 1px solid red;
+    background-color: lightpink;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    padding-top: 10px;
+}

@@ -1,0 +1,19 @@
+<h1>Добавить фильм</h1>
+<a ng-href="#list">Список фильмов</a>
+
+<form ng-submit="addMovie()">
+    <div>
+        <label for="title">Фильм</label>
+        <input type="text" id="title" ng-model="currentMovie.title" />
+        <div style="clear: both"></div>
+    </div>
+
+    <div>
+        <label for="year">Год</label>
+        <input type="text" id="year" ng-model="currentMovie.year" />
+        <div style="clear: both"></div>
+    </div>
+    <input type="submit" value="Добавить"/>
+</form>
+
+<div>{{currentMovie.title}} ({{currentMovie.year}})</div>

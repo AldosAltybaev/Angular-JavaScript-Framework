@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="../styles.css">
+        <title>Нативный JS: двустороннен связывание</title>
+        <script src="./app.js"></script>
+    </head>
+    <body>
+        <h3>Добавить фильм</h3>
+
+        <form onsubmit="return addMovie(document.getElementById('title'), document.getElementById('year'));">
+            <div>
+                <label for="title">Фильм</label>
+                <input type="text" id="title" onkeyup="showPreview(document.getElementById('title').value, document.getElementById('year').value);" required />
+                <div style="clear: both"></div>
+            </div>
+            <div>
+                <label for="year">Год</label>
+                <input type="text" id="year" onkeyup="showPreview(document.getElementById('title').value, document.getElementById('year').value);" />
+                <div style="clear: both"></div>
+            </div>
+            <input type="submit" value="Добавить"/>
+        </form>
+
+        <div id="summary"></div>
+        <h3>Фильмы</h3>
+
+        <div id="saved"></div>
+    </body>
+</html>

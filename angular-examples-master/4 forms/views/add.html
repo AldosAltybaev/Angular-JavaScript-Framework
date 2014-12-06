@@ -1,0 +1,24 @@
+<h1>Добавить фильм</h1>
+<a ng-href="#list">Список фильмов</a>
+
+<div ng-init="yearRange=[1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014]"></div>
+
+<div ng-messages="movie.title.$error">
+    <div ng-message="required" class="error">Введите название фильма</div>
+</div>
+<form ng-submit="addMovie()" name="movie">
+    <div>
+        <label for="title">Фильм</label>
+        <input type="text" id="title" name="title" ng-model="currentMovie.title" ng-required="movie.title.$dirty" />
+        <div style="clear: both"></div>
+    </div>
+
+    <div>
+        <label for="year">Год</label>
+        <select id="year" ng-model="currentMovie.year" ng-options="year as year for year in yearRange"></select>
+        <div style="clear: both"></div>
+    </div>
+    <input type="submit" value="Добавить"/>
+</form>
+
+<div>{{currentMovie.title}} ({{currentMovie.year}})</div>

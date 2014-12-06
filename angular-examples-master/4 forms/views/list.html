@@ -1,0 +1,9 @@
+<h1>Фильмы</h1>
+<a ng-href="#add">Добавить фильм</a>
+<div ng-repeat="movie in getMovies()">
+    <movie-poster class="poster" src="{{movie.img}}"></movie-poster>
+    <div style="float: left">
+        <ng-include src="'views/partials/movie.html'"></ng-include>
+    </div>
+    <div style="clear:both"></div>
+</div>
